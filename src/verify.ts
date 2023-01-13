@@ -22,8 +22,8 @@ function getPublicKey(jwksUri: string, kid: string) {
   setDeferredItem(kid);
 
   return fetch(jwksUri)
-    .then<AzureJwks>((res) => res.json())
-    .then((res) => {
+    .then((res) => res.json())
+    .then((res: AzureJwks) => {
       res.keys.forEach((key) => {
         const existing = getItem(key.kid);
         const pem: string = getPem(key.n, key.e);
