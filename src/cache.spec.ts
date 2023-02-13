@@ -2,34 +2,34 @@ import { clear, getItem, setItem } from './cache.js';
 import { resetConfig, setConfig } from './config.js';
 
 describe('cache', () => {
-  beforeEach(() => {
-    clear();
-  });
+	beforeEach(() => {
+		clear();
+	});
 
-  afterEach(() => {
-    resetConfig();
-  });
+	afterEach(() => {
+		resetConfig();
+	});
 
-  describe('getItem method', () => {
-    it('should return value', () => {
-      setItem('valid', 'top-secret');
-      const result = getItem('valid');
+	describe('getItem method', () => {
+		it('should return value', () => {
+			setItem('valid', 'top-secret');
+			const result = getItem('valid');
 
-      expect(result).toBeDefined();
-    });
+			expect(result).toBeDefined();
+		});
 
-    it('should return null when item not exists', () => {
-      const result = getItem('not_exists');
+		it('should return null when item not exists', () => {
+			const result = getItem('not_exists');
 
-      expect(result).toBeNull();
-    });
+			expect(result).toBeNull();
+		});
 
-    it('should return null when item is expired', () => {
-      setConfig({ cacheLifetime: -1000 });
-      setItem('expired', 'top-secret');
-      const result = getItem('expired');
+		it('should return null when item is expired', () => {
+			setConfig({ cacheLifetime: -1000 });
+			setItem('expired', 'top-secret');
+			const result = getItem('expired');
 
-      expect(result).toBeNull();
-    });
-  });
+			expect(result).toBeNull();
+		});
+	});
 });

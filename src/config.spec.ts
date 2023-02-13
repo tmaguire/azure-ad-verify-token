@@ -1,34 +1,34 @@
 import {
-  DEFAULT_CACHE_LIFETIME,
-  getConfig,
-  resetConfig,
-  setConfig,
+	DEFAULT_CACHE_LIFETIME,
+	getConfig,
+	resetConfig,
+	setConfig,
 } from './config.js';
 
 describe('config', () => {
-  afterEach(() => {
-    resetConfig();
-  });
+	afterEach(() => {
+		resetConfig();
+	});
 
-  describe('getConfig method', () => {
-    it('should return current config', () => {
-      const result = getConfig();
+	describe('getConfig method', () => {
+		it('should return current config', () => {
+			const result = getConfig();
 
-      expect(result).toEqual({
-        cacheLifetime: DEFAULT_CACHE_LIFETIME,
-      });
-    });
-  });
+			expect(result).toEqual({
+				cacheLifetime: DEFAULT_CACHE_LIFETIME,
+			});
+		});
+	});
 
-  describe('setConfig method', () => {
-    it('should return current config', () => {
-      const result = setConfig({
-        cacheLifetime: 0,
-      });
+	describe('setConfig method', () => {
+		it('should return current config', () => {
+			const result = setConfig({
+				cacheLifetime: 0,
+			});
 
-      expect(result).toEqual({
-        cacheLifetime: 0,
-      });
-    });
-  });
+			expect(result).toEqual({
+				cacheLifetime: 0,
+			});
+		});
+	});
 });

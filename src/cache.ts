@@ -10,10 +10,10 @@ const cache = new Map<string, CacheItem>();
  * Get expiry.
  */
 function getExpiry() {
-  const now = new Date().getTime();
-  const config = getConfig();
+	const now = new Date().getTime();
+	const config = getConfig();
 
-  return now + config.cacheLifetime;
+	return now + config.cacheLifetime;
 }
 
 /**
@@ -23,10 +23,10 @@ function getExpiry() {
  * @param value Cache item value.
  */
 export function setItem(key: string, value: string) {
-  return cache.set(key, {
-    result: Promise.resolve(value),
-    expiry: getExpiry(),
-  });
+	return cache.set(key, {
+		result: Promise.resolve(value),
+		expiry: getExpiry(),
+	});
 }
 
 /**
@@ -35,19 +35,19 @@ export function setItem(key: string, value: string) {
  * @param key Cache item key.
  */
 export function setDeferredItem(key: string) {
-  let done: (value: string) => void;
-  let error: (reason?: unknown) => void;
-  const result = new Promise<string>((resolve, reject) => {
-    done = resolve;
-	error = reject;
-  });
+	let done: (value: string) => void;
+	let error: (reason?: unknown) => void;
+	const result = new Promise<string>((resolve, reject) => {
+		done = resolve;
+		error = reject;
+	});
 
-  return cache.set(key, {
-    result,
-    done,
-	error,
-    expiry: getExpiry(),
-  });
+	return cache.set(key, {
+		result,
+		done,
+		error,
+		expiry: getExpiry(),
+	});
 }
 
 /**
@@ -56,20 +56,20 @@ export function setDeferredItem(key: string) {
  * @param key Cache item key.
  */
 export function getItem(key: string) {
-  const value = cache.get(key);
-  const now = new Date().getTime();
+	const value = cache.get(key);
+	const now = new Date().getTime();
 
-  if (!value) {
-    return null;
-  }
+	if (!value) {
+		return null;
+	}
 
-  if (value.expiry < now) {
-    // expired
-    cache.delete(key);
-    return null;
-  }
+	if (value.expiry < now) {
+		// expired
+		cache.delete(key);
+		return null;
+	}
 
-  return value;
+	return value;
 }
 
 /**
@@ -78,12 +78,12 @@ export function getItem(key: string) {
  * @param key Cache item key.
  */
 export function removeItem(key: string) {
-  return cache.delete(key);
+	return cache.delete(key);
 }
 
 /**
  * Clear all items.
  */
 export function clear() {
-  cache.clear();
+	cache.clear();
 }
