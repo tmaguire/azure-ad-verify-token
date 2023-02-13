@@ -38,6 +38,11 @@ export interface CacheItem {
   result: Promise<string>;
 
   /**
+   * Reject function from `value`'s promise.
+   */
+  error?: (reason?: unknown) => void;
+
+  /**
    * Resolve function from `value`'s promise.
    */
   done?: (value: string) => void;
