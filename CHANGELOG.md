@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.5](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.4...v3.0.5) (2023-02-13)
+
+
+### Bug Fixes
+
+* Better handling for foreign token submission ([8e9f1ba](https://github.com/tmaguire/azure-ad-verify-token/commit/8e9f1baef84dd36741f5e4c3feddfb2ff892368b))
+* Patch for test CI ([d07fa76](https://github.com/tmaguire/azure-ad-verify-token/commit/d07fa7677fcbf20d19f6a143a6f037c255c66ad4))
+
 ## [3.0.4](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.3...v3.0.4) (2023-01-17)
 
 ### Documentation changes
