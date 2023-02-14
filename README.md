@@ -4,7 +4,7 @@
 
 # Azure AD Verify Token
 
-Verify JWT issued by Azure Active Directory B2C.
+Verify JWTs issued by Azure Active Directory (Azure B2C), Azure AD (organisational accounts and B2B workflows), and Microsoft Account (MSA). This is collectively referred to as the Microsoft Identity Platform which forms part of Microsoft Entra.
 
 > This fork is maintained by [@tmaguire](https://github.com/tmaguire) - this module was originally created by [@justinlettau](https://github.com/justinlettau).
 
@@ -18,7 +18,7 @@ Verify JWT issued by Azure Active Directory B2C.
 
 # Features
 
-- 🎉 **Verify JWT** issued by Azure Active Directory B2C.
+- 🎉 **Verify JWTs** issued by the Microsoft Identity Platform (including Azure AD B2C).
 - 🚀 Automatically use the **rotated public keys** from Azure.
 - 💪 Written in **TypeScript**.
 - ♻️ **Configurable cache** for public keys.
@@ -86,8 +86,8 @@ Configuration options:
 
 # References
 
-- [Overview of tokens in Azure Active Directory B2C](https://docs.microsoft.com/en-us/azure/active-directory-b2c/tokens-overview)
-- [Microsoft identity platform access tokens](https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens)
+- [Overview of tokens in Azure Active Directory B2C](https://docs.microsoft.com/en-gb/azure/active-directory-b2c/tokens-overview)
+- [Microsoft identity platform access tokens](https://docs.microsoft.com/en-gb/azure/active-directory/develop/access-tokens)
 - [RSA Key Converter](https://superdry.apphb.com/tools/online-rsa-key-converter)
 
 # Development
