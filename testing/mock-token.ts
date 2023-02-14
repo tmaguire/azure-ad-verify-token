@@ -40,3 +40,12 @@ export const encodedWithoutKid = jwt.sign(payload, privateKey, {
 		alg: 'RS256',
 	},
 });
+
+export const encodedWithInvalidKid = jwt.sign(payload, privateKey, {
+	algorithm: 'RS256',
+	header: {
+		typ: 'JWT',
+		alg: 'RS256',
+		kid: 'invalid_kid',
+	},
+});

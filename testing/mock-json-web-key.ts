@@ -1,4 +1,4 @@
-export const jsonWebKey = {
+export const validJsonWebKey = {
 	kty: 'RSA',
 	use: 'sig',
 	kid: 'i6lGk3FZzxRcUb2C3nEQ7syHJlY',

@@ -1,9 +1,10 @@
 import nock from 'nock';
 
-import { jsonWebKey } from '../testing/mock-json-web-key.js';
+import { validJsonWebKey } from '../testing/mock-json-web-key.js';
 import {
 	encodedValid,
 	encodedWithoutKid,
+	encodedWithInvalidKid,
 	payload,
 } from '../testing/mock-token.js';
 import { clear } from './cache.js';
@@ -31,7 +32,7 @@ describe('verify method', () => {
 		nock(options.jwksUri)
 			.get(() => true)
 			.once()
-			.reply(200, { keys: [jsonWebKey] });
+			.reply(200, { keys: [validJsonWebKey] });
 
 		const result = await verify(encodedValid, options);
 
@@ -42,7 +43,7 @@ describe('verify method', () => {
 		nock(options.jwksUri)
 			.get(() => true)
 			.once()
-			.reply(200, { keys: [jsonWebKey] });
+			.reply(200, { keys: [validJsonWebKey] });
 
 		verify(encodedValid, options);
 		const result = await verify(encodedValid, options);
@@ -60,5 +61,15 @@ describe('verify method', () => {
 		const result = verify(encodedWithoutKid, options);
 
 		await expect(result).rejects.toBe('invalid token');
+	});
+
+	it('should return error when kid is invalid', async () => {
+		nock(options.jwksUri)
+			.get(() => true)
+			.once()
+			.reply(200, { keys: [validJsonWebKey] });
+		const result = verify(encodedWithInvalidKid, options);
+
+		await expect(result).rejects.toBe('public key not found');
 	});
 });
