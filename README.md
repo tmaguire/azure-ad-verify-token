@@ -19,7 +19,7 @@ Verify JWTs issued by Azure Active Directory (Azure B2C), Azure AD (organisation
 # Features
 
 - 🎉 **Verify JWTs** issued by the Microsoft Identity Platform (including Azure AD B2C).
-- 🚀 Automatically use the **rotated public keys** from Azure.
+- 🚀 Automatically use the **rotated public keys** from Azure AD.
 - 💪 Written in **TypeScript**.
 - ♻️ **Configurable cache** for public keys.
 
@@ -31,11 +31,12 @@ npm install @tmaguire/azure-ad-verify-token --save
 
 # Usage
 
-### Verify
+## Verify
 
 ```ts
 import { verify, VerifyOptions } from '@tmaguire/azure-ad-verify-token';
 
+// Azure B2C example
 const options: VerifyOptions = {
 	jwksUri:
 		'https://contoso.b2clogin.com/contoso.onmicrosoft.com/discovery/v2.0/keys?p=b2c_1_signupsignin1',
@@ -43,6 +44,15 @@ const options: VerifyOptions = {
 		'https://contoso.b2clogin.com/3285c484-dce5-4abb-a341-bbe4f2bc8554/v2.0/',
 	audience: '99d1275c-e805-483f-b832-600f8130829c',
 };
+
+// Azure AD example
+// const options: VerifyOptions = {
+// 	jwksUri:
+// 		'https://login.microsoftonline.com/contoso.onmicrosoft.com/discovery/v2.0/keys',
+// 	issuer:
+// 		'https://sts.windows.net/contoso.onmicrosoft.com/',
+// 	audience: 'api://99d1275c-e805-483f-b832-600f8130829c',
+// };
 
 verify(token, options)
 	.then((decoded) => {
@@ -55,20 +65,36 @@ verify(token, options)
 	});
 ```
 
-Verify options:
+### Verify options
 
-| Property   | Type     | Description                                                 |
-| ---------- | -------- | ----------------------------------------------------------- |
-| `jwksUri`  | `string` | `jwk_uri` value obtained from B2C policy metadata endpoint. |
-| `issuer`   | `string` | `issuer` value obtained from B2C policy metadata endpoint.  |
-| `audience` | `string` | Application ID of the application accessing the tenant.     |
+| Property   | Type     | Description                                             |
+| ---------- | -------- | ------------------------------------------------------- |
+| `jwksUri`  | `string` | `jwk_uri` value obtained from metadata endpoint.        |
+| `issuer`   | `string` | `issuer` value obtained from metadata endpoint.         |
+| `audience` | `string` | Application ID of the application accessing the tenant. |
 
-Example metadata endpoints:
+### Example metadata endpoints
+
+#### Common endpoints
 
 - https://login.microsoftonline.com/common/.well-known/openid-configuration
 - https://login.microsoftonline.com/common/discovery/keys
 
-### Configuration
+#### Organisational endpoints
+
+- https://login.microsoftonline.com/{tenantId}/.well-known/openid-configuration
+- https://login.microsoftonline.com/{tenantId}/discovery/v2.0/keys
+
+> Replace `{tenantId}` with either your Tenant ID (GUID from Azure AD Portal) or one of your verified domains.
+
+#### Azure B2C endpoints
+
+- https://{tenantName}.b2clogin.com/{tenantId}/{policyName}/v2.0/.well-known/openid-configuration
+- https://{tenantName}.b2clogin.com/{tenantId}/discovery/v2.0/keys?p={policyName}
+
+> Replace `{tenantId}` with either your Tenant ID (GUID from Azure AD Portal) or one of your verified domains, replace `{tenantName}` with your B2C tenant endpoint name, and replace `{policyName}` with the relevant policy that has issued the token you want to verify.
+
+## Configuration
 
 ```ts
 import { setConfig } from '@tmaguire/azure-ad-verify-token';
@@ -78,7 +104,7 @@ setConfig({
 });
 ```
 
-Configuration options:
+### Configuration options
 
 | Property        | Type     | Description                                  | Default |
 | --------------- | -------- | -------------------------------------------- | ------- |
@@ -92,7 +118,7 @@ Configuration options:
 
 # Development
 
-```
+```bash
 npm install
 npm run build
 ```
