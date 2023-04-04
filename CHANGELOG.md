@@ -17,7 +17,8 @@ All notable changes to this project will be documented in this file. See [standa
 * Better handling for foreign token submission ([8e9f1ba](https://github.com/tmaguire/azure-ad-verify-token/commit/8e9f1baef84dd36741f5e4c3feddfb2ff892368b))
 * Patch for test CI ([d07fa76](https://github.com/tmaguire/azure-ad-verify-token/commit/d07fa7677fcbf20d19f6a143a6f037c255c66ad4))
 
-## [3.0.4](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.3...v3.0.4) (2023-01-17)
+### [3.0.4](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.3...v3.0.4) (2023-01-17)
+
 
 ### Documentation changes
 * Updated project README ([dab75b2](https://github.com/tmaguire/azure-ad-verify-token/commit/dab75b26767b71bc3dae41af29e8eeb7b2e6dfe1))
@@ -26,7 +27,7 @@ All notable changes to this project will be documented in this file. See [standa
 * chore(deps-dev): bump eslint from 8.31.0 to 8.32.0 ([0adc114](https://github.com/tmaguire/azure-ad-verify-token/commit/0adc114a5475a91f321ae3686f145334ea05df4a))
 * chore(deps-dev): bump prettier from 2.8.2 to 2.8.3 ([eb85efe](https://github.com/tmaguire/azure-ad-verify-token/commit/eb85efed7180d20bfcbefc5b2b5a4d660890f836))
 
-## [3.0.3](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.2...v3.0.3) (2023-01-13)
+### [3.0.3](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.2...v3.0.3) (2023-01-13)
 
 
 ### Package updates
@@ -41,7 +42,7 @@ All notable changes to this project will be documented in this file. See [standa
 * chore(deps-dev): bump @typescript-eslint/parser from 5.30.6 to 5.48.1 ([fb31110](https://github.com/tmaguire/azure-ad-verify-token/commit/fb311109fec78ef0b4c8315cc9068fab788c746f))
 * chore(deps-dev): bump typescript from 4.7.4 to 4.9.4 ([fcbbf44](https://github.com/tmaguire/azure-ad-verify-token/commit/fcbbf443269e524e23dbd9938e24b14bd6e5ddf2))
 
-## [3.0.2](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.1...v3.0.2) (2023-01-12)
+### [3.0.2](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.1...v3.0.2) (2023-01-12)
 
 
 ### Documentation changes
@@ -53,7 +54,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### ⚠ BREAKING CHANGES
 * Package being maintained by @tmaguire (separate package in NPM to allow for latest security fixes for jsonwebtoken)
 
-## [2.0.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v2.0.0...v2.0.1) (2022-07-16)
+### [2.0.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v2.0.0...v2.0.1) (2022-07-16)
 
 
 ### Bug Fixes
@@ -78,7 +79,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * throw error when kid is not present ([#29](https://github.com/justinlettau/azure-ad-verify-token/issues/29)) ([a968886](https://github.com/justinlettau/azure-ad-verify-token/commit/a968886a6bc0ae840c1ef6a32928b312e2f9ff46))
 
-## [1.1.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.1.0...v1.1.1) (2020-11-28)
+### [1.1.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.1.0...v1.1.1) (2020-11-28)
 
 ## [1.1.0](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.0.1...v1.1.0) (2020-03-28)
 
@@ -93,7 +94,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * update error messages ([f423e0d](https://github.com/justinlettau/azure-ad-verify-token/commit/f423e0dc3c6790ab1c214f4e7546ffa14656099d))
 
-## [1.0.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.0.0...v1.0.1) (2020-03-22)
+### [1.0.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.0.0...v1.0.1) (2020-03-22)
 
 
 ### Bug Fixes
