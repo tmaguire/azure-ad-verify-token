@@ -82,15 +82,15 @@ verify(token, options)
 
 #### Organisational endpoints
 
-- https://login.microsoftonline.com/{tenantId}/.well-known/openid-configuration
-- https://login.microsoftonline.com/{tenantId}/discovery/v2.0/keys
+- https://login.microsoftonline.com/`{tenantId}`/.well-known/openid-configuration
+- https://login.microsoftonline.com/`{tenantId}`/discovery/v2.0/keys
 
 > Replace `{tenantId}` with either your Tenant ID (GUID from Entra ID Portal) or one of your verified domains.
 
 #### Azure B2C endpoints
 
-- https://{tenantName}.b2clogin.com/{tenantId}/{policyName}/v2.0/.well-known/openid-configuration
-- https://{tenantName}.b2clogin.com/{tenantId}/{policyName}/discovery/v2.0/keys
+- https://`{tenantName}`.b2clogin.com/`{tenantId}`/`{policyName}`/v2.0/.well-known/openid-configuration
+- https://`{tenantName}`.b2clogin.com/`{tenantId}`/`{policyName}`/discovery/v2.0/keys
 
 > Replace `{tenantId}` with either your Tenant ID (GUID from Entra ID Portal) or one of your verified domains, replace `{tenantName}` with your B2C tenant endpoint name, and replace `{policyName}` with the relevant policy that has issued the token you want to verify.
 
