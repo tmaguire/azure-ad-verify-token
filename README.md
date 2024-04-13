@@ -39,9 +39,9 @@ import { verify, VerifyOptions } from '@tmaguire/azure-ad-verify-token';
 // Azure B2C example
 const options: VerifyOptions = {
 	jwksUri:
-		'https://contoso.b2clogin.com/contoso.onmicrosoft.com/discovery/v2.0/keys?p=b2c_1_signupsignin1',
+		'https://contoso.b2clogin.com/contoso.onmicrosoft.com/b2c_1_signupsignin1/discovery/v2.0/keys',
 	issuer:
-		'https://contoso.b2clogin.com/3285c484-dce5-4abb-a341-bbe4f2bc8554/v2.0/',
+		'https://contoso.b2clogin.com/contoso.onmicrosoft.com/v2.0/',
 	audience: '99d1275c-e805-483f-b832-600f8130829c',
 };
 
@@ -90,7 +90,7 @@ verify(token, options)
 #### Azure B2C endpoints
 
 - https://{tenantName}.b2clogin.com/{tenantId}/{policyName}/v2.0/.well-known/openid-configuration
-- https://{tenantName}.b2clogin.com/{tenantId}/discovery/v2.0/keys?p={policyName}
+- https://{tenantName}.b2clogin.com/{tenantId}/{policyName}/discovery/v2.0/keys
 
 > Replace `{tenantId}` with either your Tenant ID (GUID from Azure AD Portal) or one of your verified domains, replace `{tenantName}` with your B2C tenant endpoint name, and replace `{policyName}` with the relevant policy that has issued the token you want to verify.
 
