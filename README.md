@@ -2,9 +2,9 @@
 [![CI](https://github.com/tmaguire/azure-ad-verify-token/workflows/CI/badge.svg)](https://github.com/tmaguire/azure-ad-verify-token/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/tmaguire/azure-ad-verify-token/branch/main/graph/badge.svg?token=D6Y449JK0D)](https://codecov.io/gh/tmaguire/azure-ad-verify-token)
 
-# Azure AD Verify Token
+# Azure AD/Entra ID Verify Token
 
-Verify JWTs issued by Azure Active Directory (Azure B2C), Azure AD (organisational accounts and B2B workflows), and Microsoft Account (MSA). This is collectively referred to as the Microsoft Identity Platform which forms part of Microsoft Entra.
+Verify JWTs issued by Azure Active Directory (Azure B2C), Entra ID (organisational accounts and B2B workflows), and Microsoft Account (MSA). This is collectively referred to as the Microsoft Identity Platform which forms part of Microsoft Entra.
 
 > This fork is maintained by [@tmaguire](https://github.com/tmaguire) - this module was originally created by [@justinlettau](https://github.com/justinlettau).
 
@@ -19,7 +19,7 @@ Verify JWTs issued by Azure Active Directory (Azure B2C), Azure AD (organisation
 # Features
 
 - 🎉 **Verify JWTs** issued by the Microsoft Identity Platform (including Azure AD B2C).
-- 🚀 Automatically use the **rotated public keys** from Azure AD.
+- 🚀 Automatically use the **rotated public keys** from Entra ID.
 - 💪 Written in **TypeScript**.
 - ♻️ **Configurable cache** for public keys.
 
@@ -45,7 +45,7 @@ const options: VerifyOptions = {
 	audience: '99d1275c-e805-483f-b832-600f8130829c',
 };
 
-// Azure AD example
+// Entra ID example
 // const options: VerifyOptions = {
 // 	jwksUri:
 // 		'https://login.microsoftonline.com/contoso.onmicrosoft.com/discovery/v2.0/keys',
@@ -85,14 +85,14 @@ verify(token, options)
 - https://login.microsoftonline.com/{tenantId}/.well-known/openid-configuration
 - https://login.microsoftonline.com/{tenantId}/discovery/v2.0/keys
 
-> Replace `{tenantId}` with either your Tenant ID (GUID from Azure AD Portal) or one of your verified domains.
+> Replace `{tenantId}` with either your Tenant ID (GUID from Entra ID Portal) or one of your verified domains.
 
 #### Azure B2C endpoints
 
 - https://{tenantName}.b2clogin.com/{tenantId}/{policyName}/v2.0/.well-known/openid-configuration
 - https://{tenantName}.b2clogin.com/{tenantId}/{policyName}/discovery/v2.0/keys
 
-> Replace `{tenantId}` with either your Tenant ID (GUID from Azure AD Portal) or one of your verified domains, replace `{tenantName}` with your B2C tenant endpoint name, and replace `{policyName}` with the relevant policy that has issued the token you want to verify.
+> Replace `{tenantId}` with either your Tenant ID (GUID from Entra ID Portal) or one of your verified domains, replace `{tenantName}` with your B2C tenant endpoint name, and replace `{policyName}` with the relevant policy that has issued the token you want to verify.
 
 ## Configuration
 
