@@ -18,7 +18,7 @@
 	"homepage": "https://github.com/tmaguire/azure-ad-verify-token",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/tmaguire/azure-ad-verify-token"
+		"url": "git+https://github.com/tmaguire/azure-ad-verify-token.git"
 	},
 	"bugs": {
 		"url": "https://github.com/tmaguire/azure-ad-verify-token/issues"
