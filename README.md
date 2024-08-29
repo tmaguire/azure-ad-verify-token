@@ -40,8 +40,7 @@ import { verify, VerifyOptions } from '@tmaguire/azure-ad-verify-token';
 const options: VerifyOptions = {
 	jwksUri:
 		'https://contoso.b2clogin.com/contoso.onmicrosoft.com/b2c_1_signupsignin1/discovery/v2.0/keys',
-	issuer:
-		'https://contoso.b2clogin.com/contoso.onmicrosoft.com/v2.0/',
+	issuer: 'https://contoso.b2clogin.com/contoso.onmicrosoft.com/v2.0/',
 	audience: '99d1275c-e805-483f-b832-600f8130829c',
 };
 

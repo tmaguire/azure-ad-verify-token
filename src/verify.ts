@@ -68,7 +68,7 @@ export function verify(token: string, options: VerifyOptions) {
 		if (!kid) {
 			throw new Error('kid missing from token header');
 		}
-	} catch (error) {
+	} catch {
 		return Promise.reject('invalid token');
 	}
 
@@ -77,6 +77,6 @@ export function verify(token: string, options: VerifyOptions) {
 			algorithms: ['RS256'],
 			audience,
 			issuer,
-		})
+		}),
 	);
 }
