@@ -6,7 +6,7 @@ Todo
 
 ## Checklist
 
-Please ensure your pull request fulfills the following requirements:
+Please ensure your pull request fulfils the following requirements:
 
 - [ ] The commit messages follow our guidelines ([CONTRIBUTING.md](./CONTRIBUTING.md)).
 - [ ] Tests for any changes have been added (for bug fixes / features).

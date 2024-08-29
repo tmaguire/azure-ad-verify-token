@@ -9,9 +9,9 @@ about: Tell us about a bug you may have identified
 
 Todo
 
-## Expected behavior
+## Expected behaviour
 
-<!-- describe what the desired behavior would be -->
+<!-- describe what the desired behaviour would be -->
 
 Todo
 
