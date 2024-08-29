@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.7](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.6...v3.0.7) (2024-08-29)
+
+
+### Bug Fixes
+
+* Removed unused statement (improves coverage) ([b5e8af5](https://github.com/tmaguire/azure-ad-verify-token/commit/b5e8af54a37242b16246f31a0404d7e0af84da4c))
+* Updated ESLint to latest version ([79e95b4](https://github.com/tmaguire/azure-ad-verify-token/commit/79e95b4f5ad33d3d83221a566762ad372309bcf8))
+
 ### [3.0.6](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.5...v3.0.6) (2023-02-14)
 
 
