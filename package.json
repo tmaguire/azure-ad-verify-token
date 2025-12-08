@@ -1,6 +1,6 @@
 {
 	"name": "@tmaguire/azure-ad-verify-token",
-	"version": "3.0.9",
+	"version": "3.0.10",
 	"description": "Verify JWT issued by the Microsoft Identity Platform (including Azure AD B2C).",
 	"keywords": [
 		"azure",
