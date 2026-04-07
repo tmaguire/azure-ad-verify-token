@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.12](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.11...v3.0.12) (2026-04-07)
+
+
+### Bug Fixes
+
+* Tweaks for TS ([9c54099](https://github.com/tmaguire/azure-ad-verify-token/commit/9c54099a29a878e2a3f695670c8aad1ed21d2dfc))
+
 ### [3.0.11](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.10...v3.0.11) (2026-04-07)
 
 ### [3.0.10](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.9...v3.0.10) (2025-12-08)
