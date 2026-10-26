@@ -24,7 +24,7 @@ jobs:
           CI: true
 
       - name: Upload coverage reports to Codecov with GitHub Action
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v7
 
       - name: Build
         run: npm run build
