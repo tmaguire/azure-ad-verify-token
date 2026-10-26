@@ -55,7 +55,7 @@
 		"eslint-config-prettier": "^10.1.8",
 		"husky": "^9.1.7",
 		"jest": "^30.3.0",
-		"nock": "^14.0.12",
+		"nock": "^15.0.5",
 		"prettier": "^3.8.1",
 		"pretty-quick": "^4.2.2",
 		"standard-version": "^9.5.0",
